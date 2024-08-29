@@ -1,0 +1,6 @@
+  {
+    "name": "@etavolt-etatune/button",
+    "version": "0.1.0",
+    "exports": "./button.tsx",
+    "license" : "MIT"
+  }
