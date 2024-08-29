@@ -1,6 +1,0 @@
-  {
-    "name": "@etavolt-etatune/button",
-    "version": "0.1.0",
-    "exports": "./src/components/ui/button.tsx",
-    "license" : "MIT"
-  }
