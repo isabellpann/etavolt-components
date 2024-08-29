@@ -6,7 +6,8 @@ import Date from "./components/ui/icons/date"
 import RoofArea from "./components/ui/icons/roof_area"
 import Hashtag from "./components/ui/icons/hashtag"
 
-import {Button} from "@etavolt-etatune/button";
+import { Button } from "@etavolt-etatune/button"
+
 // import {Form} from "@etavolt-etatune/form"
 
 
