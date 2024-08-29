@@ -7,7 +7,7 @@ import RoofArea from "./components/ui/icons/roof_area"
 import Hashtag from "./components/ui/icons/hashtag"
 
 import {Button} from "@etavolt-etatune/button";
-import {Form} from "@etavolt-etatune/form"
+// import {Form} from "@etavolt-etatune/form"
 
 
 function App() {
@@ -22,8 +22,7 @@ function App() {
     <Date/>
     <RoofArea/>
     <Hashtag/>
-    {/* <Button variant={"secondary"}/> */}
-    <Form/>
+    <Button variant={"secondary"}/>
   </div>
   )
 }
