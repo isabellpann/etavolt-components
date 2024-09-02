@@ -6,15 +6,15 @@ import Date from "./components/ui/icons/date"
 import RoofArea from "./components/ui/icons/roof_area"
 import Hashtag from "./components/ui/icons/hashtag"
 
-import {Button} from "@etavolt-etatune/button";
+import { Button } from "./components/ui/button/button"
 
 
 function App() {
 
   return (
     <div>
-    {/* <Button variant={"secondary"} className="ml-40 mr-40 mt-40">Secondary</Button>
-    <Button variant={"default"} className="mt-40">Default</Button> */}
+    <Button variant={"secondary"} className="ml-40 mr-40 mt-40">Secondary</Button>
+    <Button variant={"default"} className="mt-40">Default</Button>
     <Power/>
     <SolarType/>
     <Angle/>

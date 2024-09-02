@@ -10,10 +10,10 @@ const buttonVariants = cva(
     variants: {
       variant: {
         // green button
-        default: "bg-[#28a745] text-white hover:bg-[#218838] w-[138px] h-[36px] px-[16px] py-[10px] gap-[6px] border-[1px] rounded-tl-[8px] shadow-[0px_1px_2px_0px_#1018280A]",
+        default: "bg-[#28a745] text-white hover:bg-[#22AB3880] w-[138px] h-[36px] px-[16px] py-[10px] gap-[6px] border-[2px] border-[#22AB38] rounded-tl-[8px] shadow-[0px_1px_2px_0px_#1018280A] ",
 
         // white button
-        secondary: "bg-[#FFFFFF] text-[#374151] hover:bg-[#E5E7EB] w-[138px] h-[36px] px-[16px] py-[10px] gap-[6px] border-[1px] rounded-tl-[8px] border-[1px] border-[#E5E7EB] shadow-[0px_1px_2px_0px_#1018280A]",
+        secondary: "bg-[#FFFFFF] text-[#374151] hover:bg-[#FFFFFF] w-[138px] h-[36px] px-[16px] py-[10px] gap-[6px] border-[2px] rounded-tl-[8px] border-[#22AB38] hover:text-[#22AB3880] hover:border-[#22AB3880] active:border-[22AB3880] shadow-[0px_1px_2px_0px_#1018280A] disabled:text-slate-500",
 
         destructive:
           "bg-destructive text-destructive-foreground hover:bg-destructive/90",
