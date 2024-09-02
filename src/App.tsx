@@ -21,7 +21,9 @@ function App() {
     <Date/>
     <RoofArea/>
     <Hashtag/>
-    <Button variant={"secondary"}/>
+    <Button variant={"secondary"} disabled>Secondary disabled</Button>
+    <Button variant={"default"} className="ml-40" disabled>Default disabled</Button>
+
   </div>
   )
 }
