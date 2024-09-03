@@ -21,6 +21,9 @@ const formSchema = z.object({
   username: z.string().min(2, {
     message: "Username must be at least 2 characters.",
   }),
+  goal: z.string().min(2, {
+    message: "Goal must be at least 2 characters.",
+  }),
 })
 
 export function FormTest() {
@@ -29,6 +32,7 @@ export function FormTest() {
       resolver: zodResolver(formSchema),
       defaultValues: {
         username: "",
+        goal: "",
         
       },
     })
@@ -59,37 +63,26 @@ export function FormTest() {
               </FormDescription>
               <FormMessage />
             </FormItem>
+            </div>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="goal"
+          render={({ field }) => (
+            <div className="flex flex-wrap">
+                
             <FormItem>
-            <FormLabel>Username 2</FormLabel>
-            <FormControl>
-              <Input placeholder="shadcn2" {...field} />
-            </FormControl>
-            <FormDescription>
-              This is your public display name.
-            </FormDescription>
-            <FormMessage />
-          </FormItem>
-          <FormItem>
-              <FormLabel>Username 3</FormLabel>
+              <FormLabel>Username 2</FormLabel>
               <FormControl>
-                <Input placeholder="shadcn3" {...field} />
+                <Input placeholder="shadcn2" {...field} />
               </FormControl>
               <FormDescription>
                 This is your public display name.
               </FormDescription>
               <FormMessage />
             </FormItem>
-            <FormItem>
-              <FormLabel>Username 4</FormLabel>
-              <FormControl>
-                <Input placeholder="shadcn4" {...field} />
-              </FormControl>
-              <FormDescription>
-                This is your public display name.
-              </FormDescription>
-              <FormMessage />
-            </FormItem>
-          </div>
+            </div>
           )}
         />
         <div className="flex justify-end">
