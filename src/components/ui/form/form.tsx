@@ -81,7 +81,7 @@ const FormItem = React.forwardRef<
   return (
     
     <FormItemContext.Provider value={{ id }}>
-      <div ref={ref} className={cn("p-5 space-y-2 w-1/3", className)} {...props} />
+      <div ref={ref} className={cn("flex flex-col p-5 space-y-2 w-full md:w-1/2 lg:w-1/3 xl:w-1/4", className)} {...props} />
     </FormItemContext.Provider>
     
   )
@@ -168,6 +168,8 @@ const FormMessage = React.forwardRef<
 })
 FormMessage.displayName = "FormMessage"
 
+
+
 export {
   useFormField,
   Form,
@@ -177,5 +179,6 @@ export {
   FormDescription,
   FormMessage,
   FormField,
+  
 }
 

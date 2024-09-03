@@ -14,8 +14,8 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form"
-import { Input } from "@/components/ui/input"
+} from "@/components/ui/form/form"
+import { Input } from "@/components/ui/form/input"
 
 const formSchema = z.object({
   username: z.string().min(2, {
