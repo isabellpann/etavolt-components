@@ -1,0 +1,6 @@
+  {
+    "name": "@etavolt-etatune/checkbox",
+    "version": "0.1.0",
+    "exports": "./checkbox.tsx",
+    "license" : "MIT"
+  }
