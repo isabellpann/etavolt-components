@@ -46,7 +46,7 @@ export function FormTest() {
   
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 p-5">
+      <form onSubmit={form.handleSubmit(onSubmit)} className="p-5">
         <FormField
           control={form.control}
           name="username"
@@ -54,9 +54,9 @@ export function FormTest() {
             <div className="flex flex-wrap">
                 
             <FormItem>
-              <FormLabel>Username 1</FormLabel>
+              <FormLabel>Username</FormLabel>
               <FormControl>
-                <Input placeholder="shadcn" {...field} />
+                <Input placeholder="username" {...field} />
               </FormControl>
               <FormDescription>
                 This is your public display name.
@@ -73,12 +73,12 @@ export function FormTest() {
             <div className="flex flex-wrap">
                 
             <FormItem>
-              <FormLabel>Username 2</FormLabel>
+              <FormLabel>Goal</FormLabel>
               <FormControl>
-                <Input placeholder="shadcn2" {...field} />
+                <Input placeholder="goal" {...field} />
               </FormControl>
               <FormDescription>
-                This is your public display name.
+                This is your goal.
               </FormDescription>
               <FormMessage />
             </FormItem>
