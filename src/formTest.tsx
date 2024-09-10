@@ -8,6 +8,7 @@ import { z } from "zod"
 import { Button } from "@/components/ui/button"
 import {
   Form,
+  EtavoltForm,
   FormControl,
   FormDescription,
   FormField,
@@ -46,12 +47,12 @@ export function FormTest() {
   
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="p-5">
+      <EtavoltForm onSubmit={form.handleSubmit(onSubmit)} >
         <FormField
           control={form.control}
           name="username"
           render={({ field }) => (
-            <div className="flex flex-wrap">
+            
                 
             <FormItem>
               <FormLabel>Username</FormLabel>
@@ -63,14 +64,14 @@ export function FormTest() {
               </FormDescription>
               <FormMessage />
             </FormItem>
-            </div>
+            
           )}
         />
         <FormField
           control={form.control}
           name="goal"
           render={({ field }) => (
-            <div className="flex flex-wrap">
+            
                 
             <FormItem>
               <FormLabel>Goal</FormLabel>
@@ -82,13 +83,14 @@ export function FormTest() {
               </FormDescription>
               <FormMessage />
             </FormItem>
-            </div>
+            
           )}
         />
-        <div className="flex justify-end">
+        
+      </EtavoltForm>
+      <div className="flex justify-end w-full">
             <Button type="submit" >Submit</Button>
         </div>
-      </form>
     </Form>
   )
 }

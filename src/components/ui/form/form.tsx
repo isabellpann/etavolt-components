@@ -26,6 +26,14 @@ const FormFieldContext = React.createContext<FormFieldContextValue>(
   {} as FormFieldContextValue
 )
 
+const EtavoltForm = (props: any) => {
+  return (
+    <form className={cn("flex ")} {...props}>
+      {props.children}
+    </form>
+  );
+};
+
 const FormField = <
   TFieldValues extends FieldValues = FieldValues,
   TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>
@@ -33,7 +41,7 @@ const FormField = <
   ...props
 }: ControllerProps<TFieldValues, TName>) => {
   return (
-    <div className="space-x-6 items-center">
+    <div className="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 space-x-6 items-center">
     <FormFieldContext.Provider value={{ name: props.name }}>
       <Controller {...props} />
     </FormFieldContext.Provider>
@@ -81,7 +89,7 @@ const FormItem = React.forwardRef<
   return (
     
     <FormItemContext.Provider value={{ id }}>
-      <div ref={ref} className={cn("flex flex-col p-5 space-y-2 w-full md:w-1/2 lg:w-1/3 xl:w-1/4", className)} {...props} />
+      <div ref={ref} className={cn("flex flex-col p-5 space-y-2 ", className)} {...props} />
     </FormItemContext.Provider>
     
   )
@@ -173,6 +181,7 @@ FormMessage.displayName = "FormMessage"
 export {
   useFormField,
   Form,
+  EtavoltForm,
   FormItem,
   FormLabel,
   FormControl,
