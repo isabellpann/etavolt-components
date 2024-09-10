@@ -48,13 +48,11 @@ export function FormTest() {
   return (
     <Form {...form}>
       <EtavoltForm onSubmit={form.handleSubmit(onSubmit)} >
-        <div className="w-full flex">
+        
         <FormField
           control={form.control}
           name="username"
           render={({ field }) => (
-            
-                
             <FormItem>
               <FormLabel>Username</FormLabel>
               <FormControl>
@@ -68,11 +66,11 @@ export function FormTest() {
             
           )}
         />
+
         <FormField
           control={form.control}
           name="goal"
           render={({ field }) => (
-            
                 
             <FormItem>
               <FormLabel>Goal</FormLabel>
@@ -87,10 +85,6 @@ export function FormTest() {
             
           )}
         />
-        </div>
-        <div className="flex justify-end w-full p-5">
-            <Button type="submit" >Submit</Button>
-        </div>
         
       </EtavoltForm>
       

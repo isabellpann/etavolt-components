@@ -12,6 +12,7 @@ import {
 
 import { cn } from "./lib/utils"
 import { Label } from "./label"
+import { Button } from "../button"
 
 const Form = FormProvider
 
@@ -29,7 +30,12 @@ const FormFieldContext = React.createContext<FormFieldContextValue>(
 const EtavoltForm = (props: any) => {
   return (
     <form className={cn("")} {...props}>
+      <div className="w-full flex">
       {props.children}
+      </div>
+        <div className="flex justify-end w-full p-5">
+            <Button type="submit" >Submit</Button>
+        </div>
     </form>
   );
 };
