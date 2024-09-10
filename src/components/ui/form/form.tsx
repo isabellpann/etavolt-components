@@ -13,6 +13,7 @@ import {
 import { cn } from "./lib/utils"
 import { Label } from "./label"
 import { Button } from "../button"
+import { Input } from "./input"
 
 const Form = FormProvider
 
@@ -37,6 +38,37 @@ const EtavoltForm = (props: any) => {
             <Button type="submit" >Submit</Button>
         </div>
     </form>
+  );
+};
+
+interface InputFieldProps {
+  control: any;  // Define the type for 'control' based on your form library
+  label: string;
+  placeholder?: string;  // Optional prop for placeholder
+  description?: string;  // Optional prop for description
+}
+
+const EtavoltField: React.FC<InputFieldProps> = ({ control, label, placeholder, description}) => {
+  return (
+    
+    <FormField
+          control={control}
+          name={label}
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>{label}</FormLabel>
+              <FormControl>
+                <Input placeholder={placeholder} {...field} />
+              </FormControl>
+              <FormDescription>
+                {description}
+              </FormDescription>
+              <FormMessage />
+            </FormItem>
+            
+          )}
+        />
+    
   );
 };
 
@@ -93,7 +125,6 @@ const FormItem = React.forwardRef<
   const id = React.useId()
 
   return (
-    
     <FormItemContext.Provider value={{ id }}>
       <div ref={ref} className={cn("flex flex-col p-5 space-y-2 ", className)} {...props} />
     </FormItemContext.Provider>
@@ -188,6 +219,7 @@ export {
   useFormField,
   Form,
   EtavoltForm,
+  EtavoltField,
   FormItem,
   FormLabel,
   FormControl,

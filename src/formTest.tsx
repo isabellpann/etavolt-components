@@ -15,10 +15,14 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
+  EtavoltField,
 } from "@/components/ui/form/form"
 import { Input } from "@/components/ui/form/input"
 
 const formSchema = z.object({
+  question: z.string().min(2, {
+    message: "Question must be at least 2 characters.",
+  }),
   username: z.string().min(2, {
     message: "Username must be at least 2 characters.",
   }),
@@ -32,6 +36,7 @@ export function FormTest() {
     const form = useForm<z.infer<typeof formSchema>>({
       resolver: zodResolver(formSchema),
       defaultValues: {
+        question: "",
         username: "",
         goal: "",
         
@@ -48,6 +53,12 @@ export function FormTest() {
   return (
     <Form {...form}>
       <EtavoltForm onSubmit={form.handleSubmit(onSubmit)} >
+        <EtavoltField 
+        control={form.control} 
+        label="question" 
+        placeholder="question" 
+        description="what help do you need?"
+        />
         
         <FormField
           control={form.control}
