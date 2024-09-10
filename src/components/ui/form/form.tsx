@@ -28,7 +28,7 @@ const FormFieldContext = React.createContext<FormFieldContextValue>(
 
 const EtavoltForm = (props: any) => {
   return (
-    <form className={cn("flex ")} {...props}>
+    <form className={cn("")} {...props}>
       {props.children}
     </form>
   );
