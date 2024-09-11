@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { EtavoltButton } from "./button";
 
 type CalendarProps = {
     className?: string;
@@ -109,18 +110,19 @@ function EtavoltCalendar({ className }: CalendarProps) {
             )}
 
             <div className="mt-4 flex justify-between gap-2">
-                <button
-                    className=" text-sm py-1 px-4 rounded bg-white hover:bg-gray-400 border border-[#E5E7EB] flex-grow text-center"
+                <EtavoltButton
+                    // className=" text-sm py-1 px-4 rounded bg-white hover:bg-gray-400 border border-[#E5E7EB] flex-grow text-center"
                     onClick={handleCancel}
+                    variant={"secondary"}
                 >
                     Cancel
-                </button>
-                <button
-                    className=" text-sm py-1 px-4 rounded bg-[#22AA39] border border-[#22AA39] text-white hover:bg-green-600 flex-grow text-center"
+                </EtavoltButton>
+                <EtavoltButton
+                    // className=" text-sm py-1 px-4 rounded bg-[#22AA39] border border-[#22AA39] text-white hover:bg-green-600 flex-grow text-center"
                     onClick={handleOk}
                 >
                     OK
-                </button>
+                </EtavoltButton>
             </div>
 
 
