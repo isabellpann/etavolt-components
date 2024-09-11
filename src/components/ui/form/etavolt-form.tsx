@@ -5,7 +5,7 @@ import {
 } from "react-hook-form"
 
 import { cn } from "@/lib/utils";
-import { Button } from "../button"
+import { EtavoltButton } from "../button"
 import { EtavoltInput } from "./etavolt-input"
 import { FormControl, FormField, FormItem, FormLabel, FormMessage } from "../form";
 
@@ -18,7 +18,7 @@ const EtavoltForm = (props: any) => {
       {props.children}
       </div>
         <div className="flex justify-end w-full p-5">
-            <Button type="submit" >Submit</Button>
+            <EtavoltButton type="submit" >Submit</EtavoltButton>
         </div>
     </form>
   );
