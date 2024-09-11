@@ -1,0 +1,7 @@
+  {
+    "name": "@etavolt-etatune/form",
+    "version": "0.1.2",
+    "exports": "./form.tsx",
+    "license" : "MIT"
+  }
+  
