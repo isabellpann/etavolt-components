@@ -8,7 +8,7 @@ import Hashtag from "./components/ui/icons/hashtag"
 
 import InfoIconButton from "./components/ui/icons/info"
 import { Button } from "./components/ui/button"
-import {Checkbox} from "./components/ui/checkbox"
+import {EtavoltCheckbox} from "./components/ui/checkbox"
 import { ExampleForm } from "./ExampleForm"
 
 
@@ -25,7 +25,7 @@ function App() {
     <InfoIconButton/>
     <Date />
 
-    <Checkbox className="ml-40"/>
+    <EtavoltCheckbox className="ml-40"/>
     <RoofArea/>
     <Hashtag/>
 

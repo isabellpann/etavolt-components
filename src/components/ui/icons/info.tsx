@@ -1,6 +1,6 @@
 import React from "react";
 import {
-    HoverCard,
+    EtvoltHoverCard,
     HoverCardContent,
     HoverCardTrigger,
 } from "@/components/ui/hover-card";
@@ -10,7 +10,7 @@ interface InfoIconButtonProps extends React.ButtonHTMLAttributes<HTMLButtonEleme
 }
 
 const InfoIconButton: React.FC<InfoIconButtonProps> = ({ iconColor = "#757575", ...buttonProps }) => (
-    <HoverCard>
+    <EtvoltHoverCard>
         <HoverCardTrigger asChild>
             <button
                 {...buttonProps}
@@ -37,7 +37,7 @@ const InfoIconButton: React.FC<InfoIconButtonProps> = ({ iconColor = "#757575", 
         <HoverCardContent className="absolute left-full top-1/2 transform -translate-x-2 -translate-y-1/3 bg-[#757575] w-auto w-32 text-xs text-white p-2 rounded shadow-lg">
             More information
         </HoverCardContent>
-    </HoverCard>
+    </EtvoltHoverCard>
 );
 
 export default InfoIconButton;
