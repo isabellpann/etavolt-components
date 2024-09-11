@@ -6,7 +6,7 @@ import RoofArea from "./components/ui/icons/roof_area"
 import Hashtag from "./components/ui/icons/hashtag"
 import InfoIconButton from "./components/ui/icons/info"
 import { Button } from "./components/ui/button"
-import {Checkbox} from "./components/ui/checkbox"
+import {EtavoltCheckbox} from "./components/ui/checkbox"
 
 function App() {
 
@@ -20,7 +20,7 @@ function App() {
     <InfoIconButton/>
     <Date />
 
-    <Checkbox className="ml-40"/>
+    <EtavoltCheckbox className="ml-40"/>
     <RoofArea/>
     <Hashtag/>
     <Button variant={"secondary"} disabled>Secondary disabled</Button>
