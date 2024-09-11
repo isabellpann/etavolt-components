@@ -10,7 +10,6 @@ import InfoIconButton from "./components/ui/icons/info"
 import { Button } from "./components/ui/button"
 import {Checkbox} from "./components/ui/checkbox"
 import { FormTest } from "./formTest"
-import ColourPalette from "./colourPalette"
 
 
 function App() {
@@ -35,7 +34,6 @@ function App() {
 
 
     <FormTest></FormTest>
-    <ColourPalette></ColourPalette>
 
   </div>
   )
