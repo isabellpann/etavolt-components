@@ -5,25 +5,28 @@ import Angle from "./components/ui/icons/angle"
 import Date from "./components/ui/icons/date"
 import RoofArea from "./components/ui/icons/roof_area"
 import Hashtag from "./components/ui/icons/hashtag"
-
-import { Button } from "@etavolt-etatune/button"
-
-// import {Form} from "@etavolt-etatune/form"
-
+import InfoIconButton from "./components/ui/icons/info"
+import { Button } from "./components/ui/button/button"
+import {Checkbox} from "./components/ui/checkbox"
 
 function App() {
 
   return (
     <div>
-    {/* <Button variant={"secondary"} className="ml-40 mr-40 mt-40">Secondary</Button>
-    <Button variant={"default"} className="mt-40">Default</Button> */}
+    <Button variant={"secondary"} className="ml-40 mr-40 mt-40">Secondary</Button>
+    <Button variant={"default"} className="mt-40">Default</Button>
     <Power/>
     <SolarType/>
     <Angle/>
-    <Date/>
+    <InfoIconButton/>
+    <Date />
+
+    <Checkbox className="ml-40"/>
     <RoofArea/>
     <Hashtag/>
-    <Button variant={"secondary"}/>
+    <Button variant={"secondary"} disabled>Secondary disabled</Button>
+    <Button variant={"default"} className="ml-40" disabled>Default disabled</Button>
+
   </div>
   )
 }
