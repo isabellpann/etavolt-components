@@ -1,8 +1,8 @@
-import * as React from "react"
+import React from "react"
 import { Slot } from "@radix-ui/react-slot"
 import { cva, type VariantProps } from "class-variance-authority"
 
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
   "inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
@@ -10,10 +10,10 @@ const buttonVariants = cva(
     variants: {
       variant: {
         // green button
-        default: "bg-[#28a745] text-white hover:bg-[#218838] w-[138px] h-[36px] px-[16px] py-[10px] gap-[6px] border-[1px] rounded-tl-[8px] shadow-[0px_1px_2px_0px_#1018280A]",
+        default: "bg-[#28a745] text-white hover:bg-[#22AB3880] w-[138px] h-[36px] px-[16px] py-[10px] gap-[6px] border-[2px] border-[#22AB38] rounded-tl-[8px] shadow-[0px_1px_2px_0px_#1018280A] disabled:bg-[#BDBDBD] disabled:border-[#BDBDBD] disabled:cursor-not-allowed",
 
         // white button
-        secondary: "bg-[#FFFFFF] text-[#374151] hover:bg-[#E5E7EB] w-[138px] h-[36px] px-[16px] py-[10px] gap-[6px] border-[1px] rounded-tl-[8px] border-[1px] border-[#E5E7EB] shadow-[0px_1px_2px_0px_#1018280A]",
+        secondary: "bg-[#FFFFFF] text-[#22AB38] hover:bg-[#FFFFFF] w-[138px] h-[36px] px-[16px] py-[10px] gap-[6px] border-[2px] rounded-tl-[8px] border-[#22AB38] hover:text-[#22AB3880] hover:border-[#22AB3880] active:border-[22AB3880] shadow-[0px_1px_2px_0px_#1018280A] disabled:text-[#BDBDBD] disabled:border-[#BDBDBD] disabled:cursor-not-allowed",
 
         destructive:
           "bg-destructive text-destructive-foreground hover:bg-destructive/90",
