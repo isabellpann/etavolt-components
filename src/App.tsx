@@ -1,9 +1,11 @@
+
 import Power from "./components/ui/icons/power";
 import SolarType from "./components/ui/icons/solar_type";
 import Angle from "./components/ui/icons/angle";
 import Date from "./components/ui/icons/date";
 import RoofArea from "./components/ui/icons/roof_area";
 import Hashtag from "./components/ui/icons/hashtag";
+
 import InfoIconButton from "./components/ui/icons/info";
 import { EtavoltButton } from "./components/ui/button";
 import {
@@ -14,6 +16,9 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { useState, useEffect } from "react";
 import { EtavoltCalendar } from "./components/ui/calendar"
+import {EtavoltCheckbox} from "./components/ui/checkbox"
+import { ExampleForm } from "./ExampleForm"
+
 
 function App() {
   const [selectedItem, setSelectedItem] = useState<string>("Type of PV Panels Installed");
@@ -34,7 +39,8 @@ function App() {
       <EtavoltButton variant={"default"} className="mt-40">
         Default
       </EtavoltButton>
-      <Power />
+  
+    <Power />
       <SolarType />
       <Angle />
       <InfoIconButton />
@@ -43,7 +49,8 @@ function App() {
       {/* <EtavoltCheckbox className="ml-40" /> */}
       <RoofArea />
       <Hashtag />
-      <EtavoltButton variant={"secondary"} disabled>
+  
+    <EtavoltButton variant={"secondary"} disabled>
         Secondary disabled
       </EtavoltButton>
       <EtavoltButton variant={"default"} className="ml-40" disabled>
@@ -61,7 +68,10 @@ function App() {
             checked={selectedItem === 'Thin Film'} >Thin Film</EtavoltDropdownMenuItem>
         </EtavoltDropdownMenuContent>
       </EtavoltDropdownMenu>
-    </div>
+  
+    <ExampleForm></ExampleForm>
+
+  </div>
   );
 }
 
