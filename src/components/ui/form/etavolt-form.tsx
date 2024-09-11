@@ -13,7 +13,7 @@ import {
 import { cn } from "@/lib/utils";
 import { Label } from "./label"
 import { Button } from "../button"
-import { Input } from "./input"
+import { EtavoltInput } from "./etavolt-input"
 
 const Form = FormProvider
 
@@ -48,9 +48,8 @@ interface InputFieldProps {
   description?: string;  // Optional prop for description
 }
 
-const EtavoltField: React.FC<InputFieldProps> = ({ control, label, placeholder, description}) => {
+const EtavoltField: React.FC<InputFieldProps> = ({ control, label}) => {
   return (
-    
     <FormField
           control={control}
           name={label}
@@ -58,11 +57,8 @@ const EtavoltField: React.FC<InputFieldProps> = ({ control, label, placeholder, 
             <FormItem>
               <FormLabel>{label}</FormLabel>
               <FormControl>
-                <Input placeholder={placeholder} {...field} />
+                <EtavoltInput {...field} />
               </FormControl>
-              <FormDescription>
-                {description}
-              </FormDescription>
               <FormMessage />
             </FormItem>
             

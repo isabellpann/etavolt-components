@@ -9,7 +9,7 @@ import Hashtag from "./components/ui/icons/hashtag"
 import InfoIconButton from "./components/ui/icons/info"
 import { Button } from "./components/ui/button"
 import {Checkbox} from "./components/ui/checkbox"
-import { FormTest } from "./formTest"
+import { ExampleForm } from "./ExampleForm"
 
 
 function App() {
@@ -33,7 +33,7 @@ function App() {
     <Button variant={"default"} className="ml-40" disabled>Default disabled</Button>
 
 
-    <FormTest></FormTest>
+    <ExampleForm></ExampleForm>
 
   </div>
   )
