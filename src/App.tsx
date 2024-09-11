@@ -6,7 +6,6 @@ import RoofArea from "./components/ui/icons/roof_area";
 import Hashtag from "./components/ui/icons/hashtag";
 import InfoIconButton from "./components/ui/icons/info";
 import { EtavoltButton } from "./components/ui/button";
-import { Checkbox } from "./components/ui/checkbox";
 import {
   EtavoltDropdownMenu,
   EtavoltDropdownMenuContent,
@@ -14,6 +13,7 @@ import {
   EtavoltDropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { useState, useEffect } from "react";
+import { EtavoltCalendar } from "./components/ui/calendar"
 
 function App() {
   const [selectedItem, setSelectedItem] = useState<string>("Type of PV Panels Installed");
@@ -39,8 +39,8 @@ function App() {
       <Angle />
       <InfoIconButton />
       <Date />
-
-      <Checkbox className="ml-40" />
+    <EtavoltCalendar className="ml-40"/>
+      {/* <EtavoltCheckbox className="ml-40" /> */}
       <RoofArea />
       <Hashtag />
       <EtavoltButton variant={"secondary"} disabled>
